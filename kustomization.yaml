@@ -24,17 +24,16 @@ patches:
     kind: Deployment
     name: frontend
    
-namePrefix: customer1
-nameSuffix: myapp
+namePrefix: customer1-
+nameSuffix: -myapp
 commonLabels:
   customer: customer1
   location: DXB
   managed-by: kustomize
-Images:
-
-  - newName: nixvarghese03/frontend
-    newtag: v1
-    name: nixvarghese03/frontend 
+images:
+  - name: nixvarghese03/frontend
+    newName: nixvarghese03/frontend
+    newTag: v1
 
 configMapGenerator:
   - name: frontend-map
